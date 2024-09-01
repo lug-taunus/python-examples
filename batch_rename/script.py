@@ -5,11 +5,11 @@ from pathlib import Path
 def main():
     """Main function."""
     root_path = Path(".")
-    for index, file in enumerate(root_path.iterdir(), 1):
-        if file.suffix.lower() == ".jpg":
-            target = f"pict{index:03}_{file.stem}.jpg"
-            print(f"{file} -> {target}")
-            file.rename(target)
+    files = sorted(root_path.glob("*.[jJ][pP][gG]"))
+    for index, file in enumerate(files, 1):
+        target = f"pict{index:03}_{file.stem}.jpg"
+        print(f"{file} -> {target}")
+        file.rename(target)
 
 
 if __name__ == "__main__":

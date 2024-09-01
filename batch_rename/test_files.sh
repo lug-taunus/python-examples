@@ -3,7 +3,7 @@
 touch idstein.jpg
 touch paris.jpg
 touch london.jpg
-touch new_york.jpg
+touch new_york.JPG
 touch madrid.jpg
 touch tokyo.jpg
 touch toronto.jpg
