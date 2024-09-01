@@ -4,13 +4,12 @@ from pathlib import Path
 
 def main():
     """Main function."""
-    index = 1
-    for file in Path(".").iterdir():
+    root_path = Path(".")
+    for index, file in enumerate(root_path.iterdir(), 1):
         if file.suffix.lower() == ".jpg":
             target = f"pict{index:03}_{file.stem}.jpg"
             print(f"{file} -> {target}")
             file.rename(target)
-            index += 1
 
 
 if __name__ == "__main__":
