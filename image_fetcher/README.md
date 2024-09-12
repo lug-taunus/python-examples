@@ -2,7 +2,7 @@
 
 ## Task
 
-Download all thumbnails from the Wikimedia Commons **Picture of the day** article.
+Download all thumbnails from the Wikimedia Commons [Picture of the day](https://commons.wikimedia.org/wiki/Commons:Picture_of_the_day) article.
 
 ## Details
 
@@ -17,6 +17,8 @@ image URLs last part.
 
 ## Prerequisites
 
+To install the libraries described above follow these steps:
+
 - Change to the project directory `image_fetcher`
 - Create a [virtual environment](https://docs.python.org/3/library/venv.html):
 
@@ -30,7 +32,7 @@ image URLs last part.
    . .venv/bin/activate
    ```
 
-- Install requirements:
+- Install requirements with [pip](https://pypi.org/project/pip/):
 
   ```shell
   pip install -r requirements.txt
