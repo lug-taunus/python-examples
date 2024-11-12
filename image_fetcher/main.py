@@ -10,8 +10,10 @@ from bs4 import BeautifulSoup
 def main():
     """Main function."""
     root_path = Path(".")
+    headers = {'User-Agent': 'CoolBot/0.0 (https://example.org/coolbot/; coolbot@example.org)'}
     response = requests.get(
-        "https://commons.wikimedia.org/wiki/Commons:Picture_of_the_day"
+        "https://commons.wikimedia.org/wiki/Commons:Picture_of_the_day",
+        headers=headers
     )
     response.raise_for_status()
 
@@ -22,7 +24,7 @@ def main():
         filename = image.split("/")[-1]
         path = root_path / filename
         print(f"- Downloading {filename}")
-        download = requests.get(image)
+        download = requests.get(image, headers=headers)
         download.raise_for_status()
         path.write_bytes(download.content)
 
